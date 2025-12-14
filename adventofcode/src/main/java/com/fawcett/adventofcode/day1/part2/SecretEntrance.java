@@ -45,6 +45,8 @@ public class SecretEntrance implements Runnable {
     /**
      * Finds the password from the input list.
      * 
+     * The password is defined as the number of times the position clicked at 0.
+     * 
      * @param input A list of movement instructions.
      * @return The number of times the position clicked at zero.
      */
@@ -56,7 +58,11 @@ public class SecretEntrance implements Runnable {
         return clicksAtZero;
     }
 
-    /** Returns the number of clicks at that occur at zero. */
+    /** Returns the number of clicks at that occur at zero. 
+     * 
+     * @param input The movement instruction (e.g., "R10", "L20").
+     * @return The number of clicks at zero.
+    */
     int move(String input) {
         int clicksAtZero = 0;
         char direction = input.charAt(0);

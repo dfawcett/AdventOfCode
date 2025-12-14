@@ -57,6 +57,13 @@ public class SecretEntrance implements Runnable {
         return zeroCount;
     }
 
+    /**
+     * Moves the current position based on the instruction.
+     * 
+     * @param input            The movement instruction (e.g., "R10", "L20").
+     * @param startingPosition The starting position on the circular dial.
+     * @return The new position after applying the movement instruction.
+     */
     static int move(String input, int startingPosition) {
         int currentPosition = startingPosition;
         char direction = input.charAt(0);
